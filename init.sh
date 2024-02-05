@@ -4,8 +4,7 @@ yarn init -y
 sed -i '/"main":/d' your_file.json
 
 yarn add --dev parcel
-yarn add react react-dom react-router-dom
-yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+yarn add react react-dom react-router-dom @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
 
 cp "${SCRIPT_DIR}/index.html" index.html
 cp -r "${SCRIPT_DIR}/src" ./src
