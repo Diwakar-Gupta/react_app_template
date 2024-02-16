@@ -1,6 +1,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 yarn init -y
+sed -i '/"main":/d' package.json
 sed '$d' package.json >package.json2
 cat "${SCRIPT_DIR}/package.json" >>package.json2
 mv package.json2 package.json
