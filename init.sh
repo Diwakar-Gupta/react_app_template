@@ -1,6 +1,10 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 yarn init -y
+sed '$d' package.json >package.json2
+cat "${SCRIPT_DIR}/package.json" >>package.json2
+mv package.json2 package.json
+
 sed -i '/"main":/d' your_file.json
 
 yarn add --dev parcel
@@ -18,4 +22,3 @@ cp "${SCRIPT_DIR}/tailwind.config.js" tailwind.config.js
 cp "${SCRIPT_DIR}/index.css" index.css
 
 # Lint and Formatter
-

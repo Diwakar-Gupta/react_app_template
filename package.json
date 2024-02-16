@@ -1,0 +1,7 @@
+,  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "lint": "eslint src",
+    "format": "prettier --write src"
+  }
+}
