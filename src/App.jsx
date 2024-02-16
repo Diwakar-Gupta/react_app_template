@@ -8,6 +8,7 @@ const AppLayout = () => {
   console.log("AppLayout Rendered");
   return (
     <div className="app">
+      <h1 class="text-3xl font-bold underline">Hello world!</h1>
       <Outlet />
     </div>
   );
@@ -17,17 +18,13 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-    errorElement: (
-      <Suspense fallback={<Progress />}>
-        <Error />
-      </Suspense>
-    ),
+    errorElement: <Error />,
     children: [
       {
         path: "/",
         element: (
           <Suspense fallback={<Progress />}>
-            <h1 class="text-3xl font-bold underline">Hello world!</h1>
+            <ProblemSet />
           </Suspense>
         ),
       },
